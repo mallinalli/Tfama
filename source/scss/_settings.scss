@@ -1,0 +1,31 @@
+%link-reset {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+	height: 100%;
+	@include box-sizing(border-box);
+}
+
+%list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+/**
+/* ====================
+/* Variables de colores
+/* ====================
+*/
+$elColor1: #004d5a; /*para deportes*/
+$elColor2: #636450;
+$elColor3: #004d5a; /*#feca17;*/
+$elColor4: #2e4c8f;
+$elColor4Claro: #19a39f; /*para deportes*/
+$elColor5: #004d5a; /* #dd3b30;*/

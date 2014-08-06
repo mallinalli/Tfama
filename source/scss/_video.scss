@@ -1,0 +1,186 @@
+/* ======================================================================
+/* Aquí empieza el componente de móvil
+/* ======================================================================
+*/
+
+.home-video-component, .desk-home-video-component {
+  @include user-select(none);
+  margin: 10px 0;
+}
+
+.home-video-component {
+  background: lighten($elColor5,6%);
+  overflow: hidden;
+  @include border-radius(3px);
+}
+
+.actual-video {
+  height: 300px;
+  width: 100%;
+}
+
+.video-menu-wrapper {
+  background: $elColor5;
+  width: 200%;
+  color: #fff;
+  margin-bottom: 10px;
+  display: none;
+  nav {
+    display: none;
+    background: #fff;
+    width: 50%;
+    float: left;
+    background: lighten($elColor5,6%);
+    header {
+      margin: 5px 0 10px 5px;
+      font-size: 18px;
+    }
+  }
+  ul {
+    @extend %list-reset;
+    li {
+      margin-right: 10px;
+    }
+  }
+  a {
+    @extend %link-reset;
+    /* @include transition(all, 0.3s); */
+    border-bottom: 1px solid #fff;
+    padding: 10px 0 2px 0;
+    margin-left: 5px;
+  }
+}
+
+.video-min {
+  a {
+    border: none;
+    img {
+      float: left;
+      width: 30%;
+      height: auto;
+    }
+    .vid-cap { 
+      float: left;
+      width: 60%;
+      margin-left: 3%;
+
+      span {
+        display: block;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.pull {
+  display: block;
+  text-align: center;
+  a {
+    @extend %link-reset;
+    color: #fff;
+    font-size: 40px;
+  }
+}
+
+/**
+/* ======================================================================
+/* Aquí empieza el componente de escritorio
+/* ======================================================================
+*/
+
+.desk-home-video-component {
+  height: 300px;
+  overflow: hidden;
+  background: lighten($elColor5,6%);
+  @include border-radius(3px);
+}
+
+.desk-actual-video {
+  background: #444;
+  height: 300px;
+  width: 60%;
+  float: left;
+}
+
+.desk-pull {
+  width: 5%;
+  height: 100%;
+  text-align: center;
+  float: left;
+  background: $elColor5;
+  cursor: pointer;
+  &:before, &:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+  }
+  a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    height: 20px;
+    width: 12px;
+  }
+}
+
+.desk-video-menu-wrapper {
+  width: 35%;
+  float: left;
+  overflow-x: hidden;
+  height: 300px;   
+}
+
+.video-menu-container {
+  width: 100%;
+  color: #fff;
+  nav {
+    background: #fff;
+    width: 100%;
+    float: left;
+    background: lighten($elColor5,6%);
+    header {
+      margin: 5px 0 5px 5px;
+      font-size: 18px;
+    }
+    ul {
+      @extend %list-reset;
+    }
+  }
+}
+
+.desk-video-min {
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  a {
+    @extend %link-reset;
+    border: none;
+    color: #fff;
+    img {
+      float: left;
+      width: 30%;
+      height: auto;
+      margin-left: 2%;
+    }
+  }
+}
+
+.desk-vid-cap { 
+  float: left;
+  width: 65%;  
+  margin-left: 3%;
+  font-size: 11.5px;
+  span {
+    display: block;
+    line-height: 100%;
+  }
+}
+
+.desk-video-menu {
+  width: 50%;
+  float: left;
+}

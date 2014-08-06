@@ -1,0 +1,92 @@
+.menu{
+	.navegacion{
+		width: 100%;
+		text-align: justify;
+		font-size: 0.1px;
+		&:after, &:before {
+			content: '';
+			width: 100%;
+		}
+		.spacer {
+			display: none;
+			padding: 0;
+		}
+		li {
+			border: 0;
+			font-size: 14px;
+		}
+	}
+}
+.contenido{
+	width: 65.5% !important;
+	float: left;
+	margin-left: 0.5%;
+	padding-top: 0; /* Margen al interior del contenedor: */
+	padding-right: 10px; /* Margen a la derecha del contenedor: */
+	.nota-s{
+		.nota-r{
+			margin-top: 10px;
+		}
+	}
+	.middle-banner{
+		margin-bottom:10px;
+		.banner-info, .banner-comp {
+			float: left;
+		}
+		.banner-info{
+			width: 66.3%;
+		}
+		.banner-comp{
+			width: 32.6%;
+		}
+	}
+}
+
+.lateral{
+	width: 34%;
+	margin: 0 auto;
+	@include box-sizing(border-box);
+	padding: 0 0.5% 0 0.5%; /* Margen al interior del contenedor: */
+	.complemento{/* Empty Style */}
+	.widgets1{
+		width: 100%;
+		.resultados {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		.cuenta{
+			margin-bottom: 10px;
+		}
+	}
+	.widgets2{
+		width: 100%;
+		.twitter {
+			width: 100%;
+		}
+		.twitter{
+			margin-bottom: 10px;
+		}
+		.audios{/* Empty Style */}
+	}
+	.widgets3{
+		.foto, .audios {
+			width: 100%;
+		}
+		.foto {
+			margin-top: 10px;
+		}
+		.aside-banner{
+			width: 100%;
+		}
+	}
+	
+}
+.pie{
+	.hlpr-logo {
+		display: none;
+	}
+}
+
+.aside-banner {
+	width: 100%;
+}

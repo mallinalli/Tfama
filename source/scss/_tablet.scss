@@ -1,0 +1,124 @@
+.menu{
+	.navhead { display: none; }
+	.navegacion{ 
+		display: inline;
+		text-align: justify;
+		font-size: 0.1px;
+		&:after, &:before {
+			content: '';
+			width: 100%;
+			display: inline;
+		}
+		.spacer {
+			display: inline-block;
+			width: 100%;
+			padding: 1px 0;
+		}
+		li {
+			border: none;
+			display: inline;
+			font-size: 14px;
+		}
+	}
+}
+.contenido{
+	width: 98%;
+	padding-top: 10px;
+	.principal{}
+	.principales{
+		margin: 0;
+		&.hlpr-mr, &.hlpr-mr-t {
+			margin-right: 1.3%;
+		}
+		width: 32.4%;
+	}
+}
+/* ==========================
+	Componente de video
+   ========================== */
+.desk-home-video-component {
+	display: block;
+}
+.home-video-component {
+	display: none;
+}
+.infografias{
+	.large{
+		width: 48%;
+		height: auto;
+
+	}
+	.medium{
+		width: 48.5%;
+		height: 150px;
+	}
+	.small{
+		width: 23.5%;
+		height: 150px;
+	}
+}
+.lateral{
+	width: 98%;
+	float: left;
+	margin: 10px  0  0 1%;
+	.widgets1{
+		float: left;
+		.cuenta, .resultados {
+			width: 49%;
+		}
+		.resultados{
+			margin: 0;
+		}
+	}
+	.widgets2{
+		float: left;
+		.twitter {
+			width: 49%;
+			margin-top: 0;
+		}
+		.twitter{
+			&.hlpr-mr {
+				margin-right: 2%;
+			}
+		}
+	}
+	.widgets3{
+		float: left;
+		.foto, .audios {
+			width: 49%;
+		}
+		.foto {
+			margin-top: 0;
+		}
+		.audios {
+			margin-top: 0;
+		}
+	}
+	.widgets1, .widgets2, .widgets3 {
+		width: 100%;
+		& .hlpr-mr {
+			margin-right: 2%;
+		}
+	}
+	.widgets2, .widgets3 {
+		margin: 10px 0 0 0;
+	}
+}
+
+.pie{
+	.hlpr-logo {
+		display: inline-block;
+	}
+}
+
+/* ------------------------------------------------------------------------------- ESTILOS PARA BANNERS */
+.aside-banner {
+	float: left;
+	width: 49%;
+}
+
+
+/* ------------------------------------------------------------------------------- CALENDARIO */
+.stadium {
+	display: table-cell;
+}
