@@ -2,7 +2,7 @@
 
           <div class="widgets1 clearfix">
             <div class="complemento resultados hlpr-mr">
-              <h2 class="res-head">Últimos Resultados</h2>
+              <h2 class="res-head">Cinépolis</h2>
               <div class="res-list">
                 <ul>
                   <?php
@@ -42,8 +42,8 @@
           <div class="widgets2 clearfix">
             <div class="complemento twitter hlpr-mr">
               <h2>
-                <a href="https://twitter.com/TribunaDeportes">
-                  <i class="icon-twitter"></i> @TribunaDeportes
+                <a href="https://twitter.com/TribunaFama">
+                  <i class="icon-twitter"></i> @TribunaFama
                 </a>
               </h2>
               <div class="tweets-container">
@@ -76,13 +76,13 @@
 
           <div class="widgets3 clearfix">
             <div class="complemento audios hlpr-mr">
-              <h2 class="aud-head">Audios <a href="https://soundcloud.com/tribuna-deportes-oficial"><img src="<?php echo get_template_directory_uri(); ?>/img/propietary/soundcloud.png"></a></h2>
-              <div class="audio-list">
+              <h2>Horóscopos</h2>
+              <div class="">
                 <?php /*Aquí entran los audios*/ ?>
               </div>
-              <a href="" class="mastracks">Más...</a>
+              <a href="" class="">Más...</a>
             </div>
-            <div class="complemento foto">
+            <!-- div class="complemento foto">
               <h2 class="foto-head">La Chica del Día</h2>
               <div class="fotoshow">
                 <?php
@@ -103,7 +103,7 @@
                 $chicaCont++;
                   }
                 ?>
-              </div>
+              </div-->
             </div>
           </div>
 

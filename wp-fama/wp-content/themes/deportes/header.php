@@ -109,12 +109,15 @@
           </div>
           <ul class="navegacion">
             <li><a href="<?php echo home_url(); ?>">Inicio</a></li>
-            <li><a href="<?php echo home_url(); ?>/futbol">Futbol</a></li>
-            <li><a href="<?php echo home_url(); ?>/beisbol">Beisbol</a></li>
+            <li><a href="<?php echo home_url(); ?>/futbol">On Air</a></li>
+            <li><a href="<?php echo home_url(); ?>/beisbol">Lanzamientos</a></li>
+            <li><a href="<?php echo home_url(); ?>/local">Reconexión</a></li>
             <li class="spacer"></li>
-            <li><a href="<?php echo home_url(); ?>/local">Local</a></li>
-            <li><a href="<?php echo home_url(); ?>/otros-deportes">Otros Deportes</a></li>
-            <li><a href="<?php echo home_url(); ?>/calendario">Calendario</a></li>
+            <li><a href="<?php echo home_url(); ?>/local">Conciertos</a></li>
+            <li><a href="<?php echo home_url(); ?>/local">Cine</a></li>
+            <li><a href="<?php echo home_url(); ?>/local">Famosos</a></li>
+            <li><a href="<?php echo home_url(); ?>/otros-deportes">Moda</a></li>
+            <li><a href="<?php echo home_url(); ?>/calendario">Belleza</a></li>
             
           </ul>
         </div>
