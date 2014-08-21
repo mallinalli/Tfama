@@ -1,5 +1,5 @@
 body {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: $Quattro
   color: $elColor2; /*gris*/
   /*background: url(../img/bg2.jpg) no-repeat center center fixed;
   @include background-size (cover);*/
@@ -35,7 +35,7 @@ ul{
  
 .contenedor{
   width: 100%;
-  max-width: 1024px;
+  max-width: 1024px; 
   margin: 0 auto;
 }
 /* ------------------------------------------------------------------------------- MENU */
@@ -249,7 +249,7 @@ ul{
 		background: $elColor2;
 		color: #fff;
 		font-size: 14px;
-		font-family: 'Quattrocento Sans', sans-serif;
+		font-family: $Quattro
 		font-weight: bold;
 		margin: 0;
 		padding: 5px;
@@ -300,7 +300,7 @@ ul{
 .date{
 	float: right;
 	font-size: 14px;
-	font-family: 'Quattrocento Sans', sans-serif;
+	font-family: $Quattro
   	color: $elColor2;
 }
 /**
@@ -414,7 +414,7 @@ ul{
 			padding: 5px;
 			font-size: 16px;
 			font-weight: bold;
-			font-family: 'Quattrocento Sans', sans-serif;
+			font-family: $Quattro
 			margin: 0;
 		}
 
