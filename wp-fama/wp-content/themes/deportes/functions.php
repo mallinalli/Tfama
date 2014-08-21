@@ -1,5 +1,12 @@
 <?php 
 
+/* --------------------------------------------------------------------------------------- THIS S**T ENABLES THE CUSTOM MENUS*/
+
+function register_my_menu() {
+  register_nav_menu('header-menu',__( 'Header Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+
 // ================================================================================================================= GENERAL
 // Remueve partes innecesarias o inseguras de wordpress
 remove_action('wp_head', 'wp_generator');
