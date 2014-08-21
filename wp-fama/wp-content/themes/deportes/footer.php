@@ -41,7 +41,7 @@
 
           <div class="widgets3 clearfix">
             <div class="complemento audios hlpr-mr">
-              <h2>Horóscopos</h2>
+              <h2>Playlist de la Fama</h2>
               <div class="">
                 <?php /*Aquí entran los audios*/ ?>
               </div>

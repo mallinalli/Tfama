@@ -32,7 +32,7 @@ ul{
 	  	display: inherit;
 	}
 }
-
+ 
 .contenedor{
   width: 100%;
   max-width: 1024px;
@@ -450,7 +450,7 @@ ul{
 	}
 	.widgets2{
 		.twitter{
-			background: $elColor4Claro; /*azul*/
+			background: $elColor4; /*azul*/
 			@include border-radius(3px);
 			text-align: center;
 			float: left;
@@ -522,17 +522,17 @@ ul{
 .tweets-container {
 	.single-tweet {
 		font-size: 12px;
-		color: darken($elColor4Claro,30%);
+		color: darken($elColor4,30%);
 		background: #fff;
-		border-bottom: 1px solid lighten($elColor4Claro,25%); 
+		border-bottom: 1px solid lighten($elColor4,25%); 
 		@include box-sizing(border-box);
 		padding: 3px 5px;
 		margin: 0 3px;
 		a {
-			color: $elColor4Claro;
+			color: $elColor4;
 			@extend %link-reset;
 			&:hover {
-				color: darken($elColor4Claro,20%);
+				color: darken($elColor4,20%);
 			}
 		}
 	}
@@ -868,14 +868,14 @@ ul{
 /* ------------------------------------------------------------------------------- CALENDARIO */
 .calendario {
 	overflow: hidden;
-	background: $elColor4Claro;
+	background: $elColor4;
 	@include border-radius(3px);
 	@include user-select(none);
 	.activo {
 		@include transition(background, 0.5s);
-		background: darken($elColor4Claro,10%);
+		background: darken($elColor4,10%);
 		&:hover {
-			background: darken($elColor4Claro,10%);
+			background: darken($elColor4,10%);
 		}
 	}
 }
@@ -888,10 +888,10 @@ ul{
 	color: #fff;
 	cursor: pointer;
 	text-align: center;
-	border-bottom: 5px solid darken($elColor4Claro,10%);
+	border-bottom: 5px solid darken($elColor4,10%);
 	@include box-sizing(border-box);
 	&:hover {
-		background: lighten($elColor4Claro,3%);
+		background: lighten($elColor4,3%);
 	}
 }
 
@@ -900,7 +900,7 @@ ul{
 	float: left;
 	width: 100%;
 	color: #fff;
-	background: darken($elColor4Claro,10%);
+	background: darken($elColor4,10%);
 	table {
 		width: 100%;
 		background: lighten($elColor3,7%);
