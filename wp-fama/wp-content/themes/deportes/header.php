@@ -134,11 +134,12 @@
 
                 if ( $conti == '4' OR $conti == '9' OR $conti == '14' ) {
                   $menu_list .= '<li class="spacer"></li>';
-                } else {
-                  $title = $menu_item->title;
-                  $url = $menu_item->url;
-                  $menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
                 }
+
+                $title = $menu_item->title;
+                $url = $menu_item->url;
+                $menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
+
                 $conti++;
 
               }
