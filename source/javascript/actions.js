@@ -106,22 +106,24 @@ $('.menubutton').on('click','a',function(a){
    */
 var elCanalDeYoutubeQueQuieresVer = 'canalpuebla';
 
-$.getJSON('https://gdata.youtube.com/feeds/api/users/'+elCanalDeYoutubeQueQuieresVer+'/uploads/?max-results=50&q=deportes&alt=json', function(data) {
+/*$.getJSON('https://gdata.youtube.com/feeds/api/users/'+elCanalDeYoutubeQueQuieresVer+'/uploads/?max-results=50&q=deportes&alt=json', function(data) {*/
+$.getJSON('http://gdata.youtube.com/feeds/api/playlists/PLVsUMqTwd0m42DQZk5TBycje3FT3GRB7i?v=2&alt=json', function(data) {
+
+  console.log(data);
+
   var listaInicial = data.feed.entry;
   var elvideo = [];
-  /*for (var i = 0; i < listaInicial.length; i++) {
-    if (listaInicial[i].content.$t.indexOf('brasil2014') > 0) {
-      elvideo.push(listaInicial[i]);
-    }
-  }*/
 
   elvideo = listaInicial;
 
   /**
 		/* Obtiene el último video del canal de Youtube y lo asigna al stage del componente
 		*/
-  var startervid = elvideo[0].id.$t;
-  startervid = startervid.replace('http://gdata.youtube.com/feeds/api/videos/','https://www.youtube.com/embed/');
+  /*var startervid = elvideo[0].id.$t;*/
+  var startervid = elvideo[0].link[0].href;
+  /*startervid = startervid.replace('http://gdata.youtube.com/feeds/api/videos/','https://www.youtube.com/embed/');*/
+  startervid = startervid.replace('&feature=youtube_gdata','');
+  startervid = startervid.replace('http://www.youtube.com/watch?v=','https://www.youtube.com/embed/');
   $('.actual-video').html('<iframe id="ytplayer" type="text/html" width="100%" height="100%" src="'+startervid+'" frameborder="0" allowfullscreen></iframe>');
   $('.desk-actual-video').html('<iframe id="ytplayer" type="text/html" width="100%" height="100%" src="'+startervid+'" frameborder="0" allowfullscreen></iframe>');
 
@@ -141,8 +143,11 @@ $.getJSON('https://gdata.youtube.com/feeds/api/users/'+elCanalDeYoutubeQueQuiere
 		/* Populate the component's submenu with the data from youtube
 		*/
   for(k=0; k<elvideo.length; k++) {
-    var videourl = elvideo[k].id.$t;
-    videourl = videourl.replace('http://gdata.youtube.com/feeds/api/videos/','https://www.youtube.com/embed/');
+    /*var videourl = elvideo[k].id.$t;*/
+    var videourl = elvideo[k].link[0].href;
+    /*videourl = videourl.replace('http://gdata.youtube.com/feeds/api/videos/','https://www.youtube.com/embed/');*/
+    videourl = videourl.replace('&feature=youtube_gdata','');
+    videourl = videourl.replace('http://www.youtube.com/watch?v=','https://www.youtube.com/embed/');
     $('.desk-video-menu > ul').append('<li class="desk-video-min"><a href="" data-videocall="'+videourl+'"><img src="'+elvideo[k].media$group.media$thumbnail[1].url+'" alt="img"><div class="desk-vid-cap"><span>'+elvideo[k].title.$t+'</span></div></a></li>');
   }
 
@@ -190,8 +195,11 @@ $.getJSON('https://gdata.youtube.com/feeds/api/users/'+elCanalDeYoutubeQueQuiere
 			/* Populate the component's submenu with the data from youtube
 			*/
   for(k=0; k<elvideo.length; k++) {
-    var videourl = elvideo[k].id.$t;
-    videourl = videourl.replace('http://gdata.youtube.com/feeds/api/videos/','https://www.youtube.com/embed/');
+    /*var videourl = elvideo[k].id.$t;*/
+    var videourl = elvideo[k].link[0].href;
+    /*videourl = videourl.replace('http://gdata.youtube.com/feeds/api/videos/','https://www.youtube.com/embed/');*/
+    videourl = videourl.replace('&feature=youtube_gdata','');
+    videourl = videourl.replace('http://www.youtube.com/watch?v=','https://www.youtube.com/embed/');
     $('.video-menu > ul').append('<li class="video-min"><a href="" data-videocall="'+videourl+'"><img src="'+elvideo[k].media$group.media$thumbnail[1].url+'" alt="img"><div class="vid-cap"><span>'+elvideo[k].title.$t+'</span></div></a></li>');
   }
 
