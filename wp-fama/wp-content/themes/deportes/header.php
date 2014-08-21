@@ -107,19 +107,51 @@
               <a href="#"><i class="icon-reorder"></i>&nbsp;</a>
             </div> 
           </div>
-          <ul class="navegacion">
-            <li><a href="<?php echo home_url(); ?>">Inicio</a></li>
-            <li><a href="<?php echo home_url(); ?>/futbol">On Air</a></li>
-            <li><a href="<?php echo home_url(); ?>/beisbol">Lanzamientos</a></li>
-            <li><a href="<?php echo home_url(); ?>/local">Reconexión</a></li>
+          <!-- <ul class="navegacion">
+            <li><a href="<?php  home_url(); ?>">Inicio</a></li>
+            <li><a href="<?php  home_url(); ?>/futbol">On Air</a></li>
+            <li><a href="<?php  home_url(); ?>/beisbol">Lanzamientos</a></li>
+            <li><a href="<?php  home_url(); ?>/local">Reconexión</a></li>
             <li class="spacer"></li>
-            <li><a href="<?php echo home_url(); ?>/local">Conciertos</a></li>
-            <li><a href="<?php echo home_url(); ?>/local">Cine</a></li>
-            <li><a href="<?php echo home_url(); ?>/local">Famosos</a></li>
-            <li><a href="<?php echo home_url(); ?>/otros-deportes">Moda</a></li>
-            <li><a href="<?php echo home_url(); ?>/calendario">Belleza</a></li>
+            <li><a href="<?php  home_url(); ?>/local">Conciertos</a></li>
+            <li><a href="<?php  home_url(); ?>/local">Cine</a></li>
+            <li><a href="<?php  home_url(); ?>/local">Famosos</a></li>
+            <li><a href="<?php  home_url(); ?>/otros-deportes">Moda</a></li>
+            <li><a href="<?php  home_url(); ?>/calendario">Belleza</a></li>
+          </ul> -->
+          <?php
             
-          </ul>
+            $menu_name = 'header-menu';
+
+            if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+
+              $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+              $menu_items = wp_get_nav_menu_items($menu->term_id);
+              $menu_list = '<ul id="menu-' . $menu_name . '" class="navegacion" >';
+              $conti = 0;
+
+              foreach ( (array) $menu_items as $key => $menu_item ) {
+
+                if ( $conti == '4' OR $conti == '9' OR $conti == '14' ) {
+                  $menu_list .= '<li class="spacer"></li>';
+                } else {
+                  $title = $menu_item->title;
+                  $url = $menu_item->url;
+                  $menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
+                }
+                $conti++;
+
+              }
+              $menu_list .= '</ul>';
+
+            } else {
+              
+              $menu_list = '<ul><li>Menu "' . $menu_name . '" not defined.</li></ul>';
+
+            }
+
+            echo $menu_list;
+          ?>
         </div>
       </header>
       <div class="contenedor clearfix">
