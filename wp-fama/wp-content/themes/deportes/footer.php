@@ -39,17 +39,13 @@
             </div>
           </div>
 
-          <div class="widgets2 clearfix">
-            <div class="complemento twitter hlpr-mr">
-              <h2>
-                <a href="https://twitter.com/TribunaFama">
-                  <i class="icon-twitter"></i> @TribunaFama
-                </a>
-              </h2>
-              <div class="tweets-container">
-                <?php /*Aquí entran los tuits*/ ?>
+          <div class="widgets3 clearfix">
+            <div class="complemento audios hlpr-mr">
+              <h2>Horóscopos</h2>
+              <div class="">
+                <?php /*Aquí entran los audios*/ ?>
               </div>
-              <a href="#" class="moretweets">Más...</a>
+              <a href="" class="">Más...</a>
             </div>
 
             <div class="aside-banner">
@@ -74,14 +70,19 @@
             
           </div>
 
-          <div class="widgets3 clearfix">
-            <div class="complemento audios hlpr-mr">
-              <h2>Horóscopos</h2>
-              <div class="">
-                <?php /*Aquí entran los audios*/ ?>
+          <div class="widgets2 clearfix">
+            <div class="complemento twitter hlpr-mr">
+              <h2>
+                <a href="https://twitter.com/TribunaFama">
+                  <i class="icon-twitter"></i> @TribunaFama
+                </a>
+              </h2>
+              <div class="tweets-container">
+                <?php /*Aquí entran los tuits*/ ?>
               </div>
-              <a href="" class="">Más...</a>
+              <a href="#" class="moretweets">Más...</a>
             </div>
+            
             <!-- div class="complemento foto">
               <h2 class="foto-head">La Chica del Día</h2>
               <div class="fotoshow">
