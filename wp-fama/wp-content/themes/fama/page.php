@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: deportesPage
+Template Name: page
 */
 ?>
 <?php get_header(); ?>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: deportesPage
+Template Name: videosPage
 */
 ?>
 <?php get_header(); ?>
@@ -9,15 +9,15 @@ Template Name: deportesPage
   	<h2 class="section-header"><span><?php echo get_the_title($ID); ?></span></h2>
     <?php
 
-    /* Esta parte obtiene los últimos 4 posts de la 
-    categoría de fútbol para que cada div posterior 
+    /* Esta parte obtiene los últimos 3 posts de la 
+    categoría para que cada div posterior 
     los jale automáticamente*/
       global $post;
       $slug = get_post( $post )->post_name;
 
       $displayed = array();
           
-          $args = array( 'numberposts' => '4', 'post_type' => 'post', 'post_status' => 'publish', 'meta_key'  => '_thumbnail_id', 'tax_query' => array(
+          $args = array( 'numberposts' => '3', 'post_type' => 'post', 'post_status' => 'publish', 'meta_key'  => '_thumbnail_id', 'tax_query' => array(
                 'relation' => 'AND',
                 array(
                   'taxonomy' => 'category',
@@ -30,14 +30,42 @@ Template Name: deportesPage
           
           ?>
           <?php if( isset($recent_posts[0]) ){ $displayed[] = $recent_posts[0];?>  
-    <div class="principal clearfix">
-      <a href="<?php echo get_permalink( $recent_posts[0]['ID'] ); ?>">
-        <?php $img = wp_get_attachment_image_src( get_post_thumbnail_id( $recent_posts[0]['ID'] ), 'nota-normal' ); ?>
-        <!-- <img src="http://lorempixel.com/479/243" alt="img"> -->
-        <img src="<?php echo $img[0]; ?>" alt="img">              
-        <p><?php echo $recent_posts[0]["post_title"]; ?></p>
-      </a>
-    </div>
+    
+    <div class="video-components clearfix">
+            <!-- Componente de VIDEO, versión TABLET/ESCRITORIO -->
+            <section class="desk-home-video-component">
+              <div class="desk-actual-video"><!-- Este es el stage para el video --></div>
+              <div class="desk-pull">
+                <a href=""><i class="icon-angle-right"></i></a>
+              </div>
+              <div class="desk-video-menu-wrapper">
+                <div class="video-menu-container clearfix">
+                  <nav class="desk-video-menu">
+                    <ul>
+                      <li><header><i class="icon-youtube-play"></i> <span>Videos</span></header></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </section>
+            <!-- Componente de VIDEO, versión MÓVIL -->
+            <section class="home-video-component">
+              <div class="actual-video"><!-- Este es el stage para el video --></div>
+
+              <div class="video-menu-wrapper clearfix">
+                <nav class="video-menu">
+                  <ul>
+                    <li><header><i class="icon-youtube-play"></i> <span>Videos</span></header></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="pull">
+                <a href=""><i class="icon-angle-down"></i></a>
+              </div>
+            </section>
+          </div>
+          
+
     <?php } ?>
   	<div class="clearfix">
       <?php if( isset($recent_posts[1]) ){ $displayed[] = $recent_posts[1];?>
