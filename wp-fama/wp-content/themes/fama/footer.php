@@ -1,71 +1,46 @@
         <aside class="lateral clearfix">
 
           <div class="widgets1 clearfix">
-            <div class="complemento resultados hlpr-mr">
-              <h2 class="res-head">Cinépolis</h2>
-              <div class="res-list">
-                <ul>
-                  <?php
-                  $args = array( 'numberposts' => '10', 'post_type' => 'resultado', 'post_status' => 'publish' );
-                  $resultados = wp_get_recent_posts( $args );
-                  foreach( $resultados as $resultado ){
-                  ?>
-                  <li><strong><?php echo $resultado["post_title"] ?></strong></li>
-                  <?php
-                  }
-                  ?>  
-                </ul>
+            <div class="complemento cine hlpr-mr">
+              <h2 class="res-head"><img src="<?php echo get_template_directory_uri(); ?>/img/cinepolis.png"></h2>
+              <div class="selector">
+                <select>
+                  <option value="Selecciona una ciudad">Selecciona una ciudad</option>
+                  <option value="0">México D.F.</option>
+                  <option value="1">Guadalajara</option>
+                  <option value="2">Monterrey</option>
+                  <option value="3">Puebla</option>
+                </select>
               </div>
-              <h3 class="res-footer">  </h3>
+              <div class="selector">
+                <select>
+                  <option value="Selecciona una película">Selecciona una película</option>
+                  <option value="0">Una</option>
+                  <option value="1">Dos</option>
+                  <option value="2">Tres</option>
+                  <option value="3">Cuatro</option>
+                </select>
+              </div>
+              <input type="submit" class="btnEnviar" value="VER CARTELERA">
+              
             </div>
             <div class="aside-banner">
               <!--/* Revive Adserver Javascript Tag v3.0.4 */-->
-
-              <script type='text/javascript'><!--//<![CDATA[
-                 var m3_u = (location.protocol=='https:'?'https://www.bnrspd.dreamhosters.com/revive/www/delivery/ajs.php':'http://www.bnrspd.dreamhosters.com/revive/www/delivery/ajs.php');
-                 var m3_r = Math.floor(Math.random()*99999999999);
-                 if (!document.MAX_used) document.MAX_used = ',';
-                 document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
-                 document.write ("?zoneid=41");
-                 document.write ('&amp;cb=' + m3_r);
-                 if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
-                 document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
-                 document.write ("&amp;loc=" + escape(window.location));
-                 if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
-                 if (document.context) document.write ("&context=" + escape(document.context));
-                 if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
-                 document.write ("'><\/scr"+"ipt>");
-              //]]>--></script><noscript><a href='http://www.bnrspd.dreamhosters.com/revive/www/delivery/ck.php?n=a648e09e&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://www.bnrspd.dreamhosters.com/revive/www/delivery/avw.php?zoneid=41&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a648e09e' border='0' alt='' /></a></noscript>
             </div>
           </div>
 
           <div class="widgets3 clearfix">
             <div class="complemento audios hlpr-mr">
-              <h2>Playlist de la Fama</h2>
-              <div class="">
+              <h2 class="aud-head">Playlist de la Fama <a href="https://soundcloud.com/tribunafama"><img src="<?php echo get_template_directory_uri(); ?>/img/propietary/soundcloud.png"></a></h2>
+              <div class="audio-list">
                 <?php /*Aquí entran los audios*/ ?>
               </div>
-              <a href="" class="">Más...</a>
+              <a href="" class="mastracks">Más...</a>
             </div>
 
             <div class="aside-banner">
               <!--/* Revive Adserver Javascript Tag v3.0.4 */-->
 
-              <script type='text/javascript'><!--//<![CDATA[
-                 var m3_u = (location.protocol=='https:'?'https://www.bnrspd.dreamhosters.com/revive/www/delivery/ajs.php':'http://www.bnrspd.dreamhosters.com/revive/www/delivery/ajs.php');
-                 var m3_r = Math.floor(Math.random()*99999999999);
-                 if (!document.MAX_used) document.MAX_used = ',';
-                 document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
-                 document.write ("?zoneid=42");
-                 document.write ('&amp;cb=' + m3_r);
-                 if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
-                 document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
-                 document.write ("&amp;loc=" + escape(window.location));
-                 if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
-                 if (document.context) document.write ("&context=" + escape(document.context));
-                 if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
-                 document.write ("'><\/scr"+"ipt>");
-              //]]>--></script><noscript><a href='http://www.bnrspd.dreamhosters.com/revive/www/delivery/ck.php?n=a6696850&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://www.bnrspd.dreamhosters.com/revive/www/delivery/avw.php?zoneid=42&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a6696850' border='0' alt='' /></a></noscript>
             </div>
             
           </div>

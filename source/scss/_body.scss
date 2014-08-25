@@ -1,5 +1,5 @@
 body {
-  font-family: $Quattro
+  font-family: 'Quattrocento Sans', sans-serif;
   color: $elColor2; /*gris*/
   /*background: url(../img/bg2.jpg) no-repeat center center fixed;
   @include background-size (cover);*/
@@ -35,7 +35,7 @@ ul{
  
 .contenedor{
   width: 100%;
-  max-width: 1024px; 
+  max-width: 1024px;
   margin: 0 auto;
 }
 /* ------------------------------------------------------------------------------- MENU */
@@ -141,13 +141,15 @@ ul{
 .category{
 	background: $elColor2;
 	color: #fff;
+	
 	span{
-		/*float: left;*/
-		width: 49%;
-		margin: 0 5px 0;
-		padding: 7px;
+		position: absolute;
+		margin-top: -21px;
 		font-size: 15px;
 		@include box-sizing(border-box);
+		background: #000;
+		width: 100%;
+		opacity: 0.6;
 	}
 }
 .principales{
@@ -155,6 +157,7 @@ ul{
 	float: left;
 	background: none;
 	margin: 0 0.5%;
+	position: relative;
 	img{
 		width: 100%;
 	}
@@ -180,8 +183,9 @@ ul{
 .sli-over {
 	position: absolute;
 	bottom: 0;
-	background: $elColor2;
+	background: #222;
 	z-index: 2;
+	opacity: 0.7
 }
 
 .sli-control {
@@ -249,7 +253,7 @@ ul{
 		background: $elColor2;
 		color: #fff;
 		font-size: 14px;
-		font-family: $Quattro
+		font-family: 'Quattrocento Sans', sans-serif;
 		font-weight: bold;
 		margin: 0;
 		padding: 5px;
@@ -300,7 +304,7 @@ ul{
 .date{
 	float: right;
 	font-size: 14px;
-	font-family: $Quattro
+	font-family: 'Quattrocento Sans', sans-serif;
   	color: $elColor2;
 }
 /**
@@ -404,7 +408,7 @@ ul{
 .lateral{
 	width: 100%;
 	margin: 0 auto;
-	.resultados, .twitter, .audios {
+	.resultados, .twitter, .audios, .cine {
 		margin-top: 10px;
 	}
 	.complemento{
@@ -412,9 +416,9 @@ ul{
 			color: #fff;
 			text-align: center;
 			padding: 5px;
-			font-size: 16px;
+			font-size: 22px;
 			font-weight: bold;
-			font-family: $Quattro
+			font-family: $Indie;
 			margin: 0;
 		}
 
@@ -426,10 +430,11 @@ ul{
 			width: 100%;
 			height: 120px;
 		}
-		.resultados{
+		
+		.resultados, .cine{
 			float: left;
 			width: 100%;
-			background: lighten($elColor5,6%); /*rojo claro*/
+			background: #0b5ba1; /*rojo claro*/
 			@include border-radius(3px);
 			overflow: hidden;
 			.res-list{
@@ -442,10 +447,43 @@ ul{
 					}
 				}
 			}
+
 			.res-footer{
-				background: $elColor5; /*rojo*/
+				background: $elColor5; 
 				margin: 0 auto;
 			}
+		}
+		.selector{
+			line-height: 35px;
+			height: 35px;
+			width: 100% !important;
+			padding: 0 0 0 10px;
+			position: relative;
+			overflow: hidden;
+			border-radius: 3px;
+			zoom: 0;
+			select{
+				border: none;
+				background: #fff;
+				position: absolute;
+				height: 30px;
+				top: 2px;
+				left: 0;
+				width: 96%;
+				margin: 0 2%;
+			}
+		}
+		.btnEnviar{
+			font-size: .95em;
+			padding: 8px 0;
+			width: 50%;
+			font-weight: bold;
+			margin: 20px 2%;
+			float: right;
+			@include border-radius(3px);
+			background-color: #fbcf4c;
+			border: none;
+			font-family: 'Roboto',Helvetica,Arial,sans-serif;
 		}
 	}
 	.widgets2{
@@ -458,7 +496,7 @@ ul{
 			h2 a {
 				color: #fff;
 				padding: 5px;
-				font-size: 16px;
+				font-size: 22px;
 				font-weight: bold;
 				margin: 3px 0;
 				text-decoration: none;
@@ -554,6 +592,7 @@ ul{
 	@include user-select(none);
 	background: $elColor3;
 	@include border-radius(3px);
+	
 }
 .aud-head {
 	vertical-align: bottom;

@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /Github/Tfama/wp-fama/
+RewriteBase /GitHub/Tfama/wp-fama/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /Github/Tfama/wp-fama/index.php [L]
+RewriteRule . /GitHub/Tfama/wp-fama/index.php [L]
 </IfModule>
 
 # END WordPress

@@ -245,10 +245,10 @@ $.getJSON('http://gdata.youtube.com/feeds/api/playlists/PLVsUMqTwd0m42DQZk5TBycj
     /* =================================
     */
 SC.initialize({
-  client_id: 'fadfafec99840a9bab19d077b12fd206'
+  client_id: 'd04c0a9929967b21630ea9058ca95466'
 });
 
-var url = 'https://api.soundcloud.com/tracks.json?user_id=tribuna-deportes-oficial&client_id=fadfafec99840a9bab19d077b12fd206';
+var url = 'https://api.soundcloud.com/tracks.json?user_id=tribunafama&client_id=d04c0a9929967b21630ea9058ca95466';
 var trackPosition = -1;
 $.getJSON(url, function(tracks) {
   theAudioLoop(tracks,4);
